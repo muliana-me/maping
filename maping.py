@@ -8,7 +8,7 @@ def load_coords(file_path):
         with open(file_path, 'r') as file:
             return json.load(file)
     except FileNotFoundError:
-        print('[ ERROR ] Coords data not found, run config.py first!')
+        print('[ ERROR ] Coords data not found. Run config.py first!')
         os._exit(0)
 
 def start():
@@ -21,7 +21,7 @@ def start():
 
         pyautogui.moveTo(name_x, name_y, duration=0.1)
         pyautogui.click()
-        pyautogui.sleep(0.4)
+        pyautogui.sleep(0.3)
 
         pyautogui.hotkey('ctrl', 'tab')
         pyautogui.sleep(0.4)
@@ -41,7 +41,7 @@ def start():
 
         pyautogui.moveTo(address_x, address_y, duration=0.1)
         pyautogui.click()
-        pyautogui.sleep(0.4)
+        pyautogui.sleep(0.3)
 
         pyautogui.hotkey('ctrl', 'tab')
         pyautogui.sleep(0.4)
@@ -61,7 +61,7 @@ def start():
 
         pyautogui.moveTo(number_x, number_y, duration=0.1)
         pyautogui.click()
-        pyautogui.sleep(0.4)
+        pyautogui.sleep(0.3)
 
         pyautogui.hotkey('ctrl', 'tab')
         pyautogui.sleep(0.4)
@@ -77,10 +77,10 @@ def start():
         pyautogui.sleep(0.4)
 
         pyautogui.hotkey('ctrl', 'tab')
-        pyautogui.sleep(0.4)
+        pyautogui.moveTo(240, 300, duration=0.1)
 
     else:
-        print('[ ERROR ] Coords data not found, run mouse_config.py first!')
+        print('[ ERROR ] Coords data not found. Run mouse_config.py first!')
         os._exit(0)
         
     
